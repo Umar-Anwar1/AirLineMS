@@ -54,6 +54,7 @@ public class Home extends JFrame implements ActionListener {
         menuBar.add(ticket);
 
         JMenuItem boardingPass = new JMenuItem("Boarding Pass");
+        boardingPass.addActionListener(this);
         ticket.add(boardingPass);
     }
 
@@ -73,6 +74,8 @@ public class Home extends JFrame implements ActionListener {
             new JourneyDetails();
         } else if (text.equals("Cancel Ticket")) {
             new Cancel();
+        } else if(text.equals("Boarding Pass")){
+            new BoardingPass();
         }
 
 
