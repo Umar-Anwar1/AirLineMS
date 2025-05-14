@@ -47,6 +47,7 @@ public class Home extends JFrame implements ActionListener {
         details.add(JourneyDetail);
 
         JMenuItem ticketCancellation = new JMenuItem("Cancel Ticket");
+        ticketCancellation.addActionListener(this);
         details.add(ticketCancellation);
 
         JMenu ticket = new JMenu("Ticekt");
@@ -70,6 +71,8 @@ public class Home extends JFrame implements ActionListener {
             new BookFlight();
         } else if (text.equals("Journey Details")) {
             new JourneyDetails();
+        } else if (text.equals("Cancel Ticket")) {
+            new Cancel();
         }
 
 
